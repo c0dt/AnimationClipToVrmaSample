@@ -25,7 +25,7 @@ namespace Baxter
         public static byte[] Create(Animator humanoid, AnimationClip clip, IReadOnlyDictionary<string, ExpressionKey> expressionMap = null)
         {
             var data = new ExportingGltfData();
-            // Use a compatible exporter, e.g., com.AKAVirtual.VrmAnimationExporter
+            // Use a compatible exporter, e.g., app.c0dt.VrmAnimationExporter
             using var exporter = new app.c0dt.VrmAnimationExporter(data, new GltfExportSettings());
             
             exporter.Prepare(humanoid.gameObject);
